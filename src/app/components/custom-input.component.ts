@@ -1,4 +1,4 @@
-import { Component, model, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, model, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,8 @@ import { FormsModule } from '@angular/forms';
     selector: 'app-custom-input',
     template: `<input [(ngModel)]="value"/>`,
     imports: [FormsModule],
-    styles: [``]
+    styles: [``],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CustomInputComponent implements OnInit {
 

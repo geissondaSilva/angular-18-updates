@@ -1,14 +1,6 @@
-<!-- <input type="text" [(ngModel)]="item"> -->
-<app-custom-input [(value)]="inputValue" (valueChange)="onChangeInputValue($event)"></app-custom-input>
-<button (click)="add()">Adicionar</button>
+<app-input-add (add)="add($event)"></app-input-add>
 
-<ul>
-  @for (item of list(); track $index) {
-    <li>{{item.name}}</li>
-  } @empty {
-    <li>Nenhum item foi adicionado!</li>
-  }
-</ul>
+<app-list [data]="list()"></app-list>
 
 <app-list-details [quantidade]="quantidade()" [itens]="list()"></app-list-details>
 

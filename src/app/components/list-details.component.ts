@@ -1,4 +1,4 @@
-import { Component, input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, OnInit } from '@angular/core';
 import { Item } from '../models/items';
 
 @Component({
@@ -6,7 +6,8 @@ import { Item } from '../models/items';
     selector: 'app-list-details',
     template: `<p>{{quantidade()}} itens adicionados na lista!</p>
     <p>Detalhes: {{detalhes()}}</p>`,
-    styles: [``]
+    styles: [``],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListDetailsComponent implements OnInit {
 
